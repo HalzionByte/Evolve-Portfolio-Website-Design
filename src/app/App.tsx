@@ -5,6 +5,7 @@ import { RotatingCube } from "./components/RotatingCube";
 import { StatWidget } from "./components/StatWidget";
 import { SkillCard } from "./components/SkillCard";
 import { ProjectCard } from "./components/ProjectCard";
+import { ExperienceCard } from "./components/ExperienceCard";
 import { SectionConnector } from "./components/SectionConnector";
 import { TerminalOutput } from "./components/TerminalOutput";
 import { BuildProgress } from "./components/BuildProgress";
@@ -396,6 +397,86 @@ export default function App() {
 
         <SectionConnector />
 
+        {/* Experience Section - Deployment History */}
+        <section id="experience" className="px-4 py-20">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-block px-3 py-1 bg-accent/10 border-2 border-accent/30 mb-4">
+                <span className="text-xs font-mono uppercase font-bold tracking-wider text-accent-foreground">
+                  DEPLOYMENT HISTORY
+                </span>
+              </div>
+              <h2 className="text-5xl font-black uppercase tracking-tight mb-4">
+                EXPERIENCE LOG
+              </h2>
+              <div className="flex gap-4 items-center flex-wrap">
+                <div className="w-16 h-1 bg-accent" />
+                <p className="text-sm font-mono text-muted-foreground uppercase">
+                  PROFESSIONAL FIELD OPERATIONS
+                </p>
+                <StatusBadge status="VERIFIED" />
+              </div>
+            </motion.div>
+
+            {/* Experience Cards Grid */}
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              {/* ===== EXPERIENCE 1 - Replace with your data ===== */}
+              <ExperienceCard
+                company="Company Name"
+                role="Your Role Title"
+                period="MMM YYYY - Present"
+                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
+                tech={["Tech 1", "Tech 2", "Tech 3"]}
+                status="ACTIVE"
+                images={[
+                  // Add images like this:
+                  // { src: "/experience/offer-letter-1.png", label: "Offer Letter" },
+                  // { src: "/experience/certificate-1.png", label: "Completion Certificate" },
+                ]}
+              />
+
+              {/* ===== EXPERIENCE 2 - Replace with your data ===== */}
+              <ExperienceCard
+                company="Company Name"
+                role="Your Role Title"
+                period="MMM YYYY - MMM YYYY"
+                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
+                tech={["Tech 1", "Tech 2", "Tech 3"]}
+                status="COMPLETED"
+                images={[
+                  // { src: "/experience/offer-letter-2.png", label: "Offer Letter" },
+                ]}
+              />
+
+              {/* ===== EXPERIENCE 3 - Replace with your data ===== */}
+              <ExperienceCard
+                company="Company Name"
+                role="Your Role Title"
+                period="MMM YYYY - MMM YYYY"
+                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
+                tech={["Tech 1", "Tech 2"]}
+                status="COMPLETED"
+                images={[
+                  // { src: "/experience/offer-letter-3.png", label: "Offer Letter" },
+                ]}
+              />
+            </motion.div>
+          </div>
+        </section>
+
+        <SectionConnector />
+
         {/* Projects Section - Engineering Modules */}
         <section id="projects" className="px-4 py-20">
           <div className="max-w-7xl mx-auto">
@@ -422,40 +503,51 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Projects Grid */}
+            {/* Featured Projects - Bento Layout: Big left + 2 small right */}
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              {/* === MAJOR PROJECTS === */}
-              <ProjectCard
-                title="OURO"
-                description="A real-time online auctioning platform featuring live bidding via WebSockets, secure user authentication, and a dynamic React frontend backed by a Spring Boot microservices architecture."
-                tech={["React", "Java", "Spring Boot", "WebSockets", "PostgreSQL"]}
-                status="DEPLOYED"
-                featured={true}
-              />
+              {/* Big card - spans full left column (2 rows) */}
+              <div className="lg:row-span-2 [&>*]:h-full">
+                <ProjectCard
+                  title="OURO"
+                  description="A real-time online auctioning platform featuring live bidding via WebSockets, secure user authentication, and a dynamic React frontend backed by a Spring Boot microservices architecture."
+                  tech={["React", "Java", "Spring Boot", "WebSockets", "PostgreSQL"]}
+                  status="DEPLOYED"
+                />
+              </div>
+              {/* Small card - top right */}
               <ProjectCard
                 title="ARCHON"
                 description="AI-powered PC part picker that intelligently recommends compatible components using advanced data structures and a seamless REST API integration."
                 tech={["Java", "Data Structures", "React", "REST API"]}
                 status="DEPLOYED"
               />
+              {/* Small card - bottom right */}
               <ProjectCard
                 title="CLIPTALK"
                 description="Peer-to-peer real-time chat application with a rich desktop GUI, supporting instant messaging via WebSockets with a styled CSS/JS web layer."
                 tech={["Java", "JavaFX", "CSS", "JavaScript", "WebSockets"]}
                 status="DEPLOYED"
               />
+            </motion.div>
+
+            {/* Remaining Projects - Standard Grid */}
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
               <ProjectCard
                 title="AZURABITES"
                 description="Online meal subscription platform allowing users to browse, subscribe, and manage customized meal plans with a clean, responsive frontend."
                 tech={["Python", "HTML", "CSS", "Flask", "SQLite"]}
                 status="DEPLOYED"
               />
-              {/* === SMALLER PROJECTS === */}
               <ProjectCard
                 title="Student Management"
                 description="Desktop application for managing student records, enrollment, and grade tracking using a Swing-based GUI."

@@ -9,6 +9,7 @@ export function Navbar() {
   const navLinks = [
     { label: "HOME", target: "home" },
     { label: "SKILLS", target: "skills" },
+    { label: "EXPERIENCE", target: "experience" },
     { label: "PROJECTS", target: "projects" },
     { label: "CONTACT", target: "contact" },
   ];
