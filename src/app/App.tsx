@@ -441,7 +441,7 @@ export default function App() {
                 status="ACTIVE"
                 images={[
                   // Add images like this:
-                  // { src: "/experience/offer-letter-1.png", label: "Offer Letter" },
+                  { src: "src\app\img\perception offer letter_hidden.jpeg", label: "Offer Letter" },
                   // { src: "/experience/certificate-1.png", label: "Completion Certificate" },
                 ]}
               />
@@ -470,7 +470,7 @@ export default function App() {
                 images={[
                   {
                     src: "src\app\img\Zayem Ur Rahman_page-0001.jpg",
-                    label: ""
+                    label: "completion letter"
                   },
                 ]}
               />
