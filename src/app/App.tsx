@@ -440,9 +440,7 @@ export default function App() {
                 tech={["python", "fastapi", "postgresql"]}
                 status="ACTIVE"
                 images={[
-                  // Add images like this:
-                  { src: "src\app\img\perception offer letter_hidden.jpeg", label: "Offer Letter" },
-                  // { src: "/experience/certificate-1.png", label: "Completion Certificate" },
+                  { src: "/img/perception offer letter_hidden.jpeg", label: "Offer Letter" },
                 ]}
               />
 
@@ -454,9 +452,7 @@ export default function App() {
                 description="Developed a responsive website for a local pet store to establish their online presence. Built a dynamic frontend using React and engineered a lightweight, efficient REST API backend using FastAPI to manage inventory and customer requests."
                 tech={["React", "FastAPI", "Python", "JavaScript"]}
                 status="COMPLETED"
-                images={[
-                  // { src: "/experience/offer-letter-2.png", label: "Offer Letter" },
-                ]}
+                images={[]}
               />
 
               {/* ===== EXPERIENCE 3 - Replace with your data ===== */}
@@ -469,7 +465,7 @@ export default function App() {
                 status="COMPLETED"
                 images={[
                   {
-                    src: "src\app\img\Zayem Ur Rahman_page-0001.jpg",
+                    src: "/img/Zayem Ur Rahman_page-0001.jpg",
                     label: "completion letter"
                   },
                 ]}
@@ -506,104 +502,127 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Featured Projects - Bento Layout: Big left + 2 small right */}
+            {/* Projects Brick Layout */}
+            {/* Row 1: Rectangle LEFT + Square RIGHT */}
             <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              {/* Big card - spans full left column (2 rows) */}
-              <div className="lg:row-span-2 [&>*]:h-full">
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  title="MCHAA"
+                  description="A hackathon project built under pressure — showcasing rapid prototyping, teamwork, and creative problem-solving in a competitive engineering environment."
+                  tech={["Hackathon"]}
+                  status="DEPLOYED"
+                />
+              </div>
+              <div className="lg:col-span-1">
                 <ProjectCard
                   title="OURO"
                   description="A real-time online auctioning platform featuring live bidding via WebSockets, secure user authentication, and a dynamic React frontend backed by a Spring Boot microservices architecture."
                   tech={["React", "Java", "Spring Boot", "WebSockets", "PostgreSQL"]}
                   status="DEPLOYED"
-                  images={[
-                    // Add images like this:
-                    { src: "src\app\img\Ouro_dash.png", label: "Dashboard" },
-
-                  ]}
+                  imageUrl="/img/Ouro_dash.png"
                 />
               </div>
-              {/* Small card - top right */}
-              <ProjectCard
-                title="ARCHON"
-                description="AI-powered PC part picker that intelligently recommends compatible components using advanced data structures and a seamless REST API integration."
-                tech={["Java", "Data Structures", "React", "REST API"]}
-                status="DEPLOYED"
-                images={[
-                  // Add images like this:
-                  { src: "src\app\img\archon_1.png", label: "dashbord" },
-                  { src: "src\app\img\archon_2.png", label: "result" },
-                  { src: "src\app\img\archon_3.png", label: "components" },
-
-                ]}
-              />
-              {/* Small card - bottom right */}
-              <ProjectCard
-                title="CLIPTALK"
-                description="Peer-to-peer real-time chat application with a rich desktop GUI, supporting instant messaging via WebSockets with a styled CSS/JS web layer."
-                tech={["Java", "JavaFX", "CSS", "JavaScript", "WebSockets"]}
-                status="DEPLOYED"
-                images={[
-                  // Add images like this:
-                  { src: "src\app\img\clip_1.png", label: "user1" },
-                  { src: "src\app\img\clip_2.png", label: "user2" },
-                  { src: "src\app\img\clip_3.png", label: "user3" },
-                  { src: "src\app\img\clip_4.png", label: "server" },
-                ]}
-              />
             </motion.div>
 
-            {/* Remaining Projects - Standard Grid */}
+            {/* Row 2: Square LEFT + Rectangle RIGHT */}
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <ProjectCard
-                title="AZURABITES"
-                description="Online meal subscription platform allowing users to browse, subscribe, and manage customized meal plans with a clean, responsive frontend."
-                tech={["Python", "HTML", "CSS", "Flask", "SQLite"]}
-                status="DEPLOYED"
-                images={[
-                  // Add images like this:
-                  { src: "src\app\img\Azura_dash.png", label: "Dashboard" },
+              <div className="lg:col-span-1">
+                <ProjectCard
+                  title="ARCHON"
+                  description="AI-powered PC part picker that intelligently recommends compatible components using advanced data structures and a seamless REST API integration."
+                  tech={["Java", "Data Structures", "React", "REST API"]}
+                  status="DEPLOYED"
+                  imageUrl="/img/archon_1.png"
+                />
+              </div>
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  title="CLIPTALK"
+                  description="Peer-to-peer real-time chat application with a rich desktop GUI, supporting instant messaging via WebSockets with a styled CSS/JS web layer."
+                  tech={["Java", "JavaFX", "CSS", "JavaScript", "WebSockets"]}
+                  status="DEPLOYED"
+                  imageUrl="/img/clip_1.png"
+                />
+              </div>
+            </motion.div>
 
-                ]}
-              />
-              <ProjectCard
-                title="Student Management"
-                description="Desktop application for managing student records, enrollment, and grade tracking using a Swing-based GUI."
-                tech={["Java", "Java Swing"]}
-                status="DEPLOYED"
-              />
-              <ProjectCard
-                title="Hotel Management"
-                description="Full-featured hotel management system for room booking, guest records, and billing — built with a Java Swing desktop interface."
-                tech={["Java", "Java Swing"]}
-                status="DEPLOYED"
-              />
-              <ProjectCard
-                title="Hotel Reservation"
-                description="Low-level hotel reservation system implemented in Assembly language using the MARS simulator, demonstrating systems programming fundamentals."
-                tech={["Assembly", "MARS"]}
-                status="DEPLOYED"
-              />
-              <ProjectCard
-                title="Restuarant Website"
-                description="Responsive restuarant website with online menus and a contact form"
-                tech={["JavaScript", "CSS", "HTML"]}
-                status="DEPLOYED"
-                images={[
-                  // Add images like this:
-                  { src: "src\app\img\food_dash.png", label: "Dashboard" },
+            {/* Row 3: Rectangle LEFT + Square RIGHT */}
+            <motion.div
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  title="AZURABITES"
+                  description="Online meal subscription platform allowing users to browse, subscribe, and manage customized meal plans with a clean, responsive frontend."
+                  tech={["Python", "HTML", "CSS", "Flask", "SQLite"]}
+                  status="DEPLOYED"
+                  imageUrl="/img/Azur_dash.png"
+                />
+              </div>
+              <div className="lg:col-span-1">
+                <ProjectCard
+                  title="Student Management"
+                  description="Desktop application for managing student records, enrollment, and grade tracking using a Swing-based GUI."
+                  tech={["Java", "Java Swing"]}
+                  status="DEPLOYED"
+                />
+              </div>
+            </motion.div>
 
-                ]}
-              />
+            {/* Row 4: Square LEFT + Rectangle RIGHT */}
+            <motion.div
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="lg:col-span-1">
+                <ProjectCard
+                  title="Hotel Management"
+                  description="Full-featured hotel management system for room booking, guest records, and billing — built with a Java Swing desktop interface."
+                  tech={["Java", "Java Swing"]}
+                  status="DEPLOYED"
+                />
+              </div>
+              <div className="lg:col-span-2">
+                <ProjectCard
+                  title="Hotel Reservation"
+                  description="Low-level hotel reservation system implemented in Assembly language using the MARS simulator, demonstrating systems programming fundamentals."
+                  tech={["Assembly", "MARS"]}
+                  status="DEPLOYED"
+                />
+              </div>
+            </motion.div>
+
+            {/* Row 5: Remaining card - right-aligned */}
+            <motion.div
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="lg:col-start-3 lg:col-span-1">
+                <ProjectCard
+                  title="Restuarant Website"
+                  description="Responsive restuarant website with online menus and a contact form"
+                  tech={["JavaScript", "CSS", "HTML"]}
+                  status="DEPLOYED"
+                  imageUrl="/img/food_dash.png"
+                />
+              </div>
             </motion.div>
 
             {/* Additional Engineering Detail */}
