@@ -520,6 +520,11 @@ export default function App() {
                   description="A real-time online auctioning platform featuring live bidding via WebSockets, secure user authentication, and a dynamic React frontend backed by a Spring Boot microservices architecture."
                   tech={["React", "Java", "Spring Boot", "WebSockets", "PostgreSQL"]}
                   status="DEPLOYED"
+                  images={[
+                    // Add images like this:
+                    { src: "src\app\img\Ouro_dash.png", label: "Dashboard" },
+
+                  ]}
                 />
               </div>
               {/* Small card - top right */}
@@ -528,6 +533,13 @@ export default function App() {
                 description="AI-powered PC part picker that intelligently recommends compatible components using advanced data structures and a seamless REST API integration."
                 tech={["Java", "Data Structures", "React", "REST API"]}
                 status="DEPLOYED"
+                images={[
+                  // Add images like this:
+                  { src: "src\app\img\archon_1.png", label: "dashbord" },
+                  { src: "src\app\img\archon_2.png", label: "result" },
+                  { src: "src\app\img\archon_3.png", label: "components" },
+
+                ]}
               />
               {/* Small card - bottom right */}
               <ProjectCard
@@ -535,6 +547,13 @@ export default function App() {
                 description="Peer-to-peer real-time chat application with a rich desktop GUI, supporting instant messaging via WebSockets with a styled CSS/JS web layer."
                 tech={["Java", "JavaFX", "CSS", "JavaScript", "WebSockets"]}
                 status="DEPLOYED"
+                images={[
+                  // Add images like this:
+                  { src: "src\app\img\clip_1.png", label: "user1" },
+                  { src: "src\app\img\clip_2.png", label: "user2" },
+                  { src: "src\app\img\clip_3.png", label: "user3" },
+                  { src: "src\app\img\clip_4.png", label: "server" },
+                ]}
               />
             </motion.div>
 
@@ -550,6 +569,11 @@ export default function App() {
                 description="Online meal subscription platform allowing users to browse, subscribe, and manage customized meal plans with a clean, responsive frontend."
                 tech={["Python", "HTML", "CSS", "Flask", "SQLite"]}
                 status="DEPLOYED"
+                images={[
+                  // Add images like this:
+                  { src: "src\app\img\Azura_dash.png", label: "Dashboard" },
+
+                ]}
               />
               <ProjectCard
                 title="Student Management"
@@ -570,10 +594,15 @@ export default function App() {
                 status="DEPLOYED"
               />
               <ProjectCard
-                title="Gym Website"
-                description="Responsive gym promotional website with class schedules, membership info, and a contact form powered by a lightweight Flask backend."
-                tech={["Flask", "CSS", "HTML"]}
+                title="Restuarant Website"
+                description="Responsive restuarant website with online menus and a contact form"
+                tech={["JavaScript", "CSS", "HTML"]}
                 status="DEPLOYED"
+                images={[
+                  // Add images like this:
+                  { src: "src\app\img\food_dash.png", label: "Dashboard" },
+
+                ]}
               />
             </motion.div>
 
