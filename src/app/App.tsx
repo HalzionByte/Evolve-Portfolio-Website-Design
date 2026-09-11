@@ -433,11 +433,11 @@ export default function App() {
             >
               {/* ===== EXPERIENCE 1 - Replace with your data ===== */}
               <ExperienceCard
-                company="Company Name"
-                role="Your Role Title"
-                period="MMM YYYY - Present"
-                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
-                tech={["Tech 1", "Tech 2", "Tech 3"]}
+                company="Perception Technologies"
+                role="Backend development intern"
+                period="July 2026 - Present"
+                description="Spearheaded the backend infrastructure by designing the core REST APIs, structuring the complex database schemas, and implementing the system's role-based audit logging for secure, compliant data management."
+                tech={["python", "fastapi", "postgresql"]}
                 status="ACTIVE"
                 images={[
                   // Add images like this:
@@ -448,11 +448,11 @@ export default function App() {
 
               {/* ===== EXPERIENCE 2 - Replace with your data ===== */}
               <ExperienceCard
-                company="Company Name"
-                role="Your Role Title"
-                period="MMM YYYY - MMM YYYY"
-                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
-                tech={["Tech 1", "Tech 2", "Tech 3"]}
+                company="Local Pet Store (Freelance)"
+                role="Full Stack Web Developer"
+                period="June 2026 - July 2026"
+                description="Developed a responsive website for a local pet store to establish their online presence. Built a dynamic frontend using React and engineered a lightweight, efficient REST API backend using FastAPI to manage inventory and customer requests."
+                tech={["React", "FastAPI", "Python", "JavaScript"]}
                 status="COMPLETED"
                 images={[
                   // { src: "/experience/offer-letter-2.png", label: "Offer Letter" },
@@ -461,14 +461,17 @@ export default function App() {
 
               {/* ===== EXPERIENCE 3 - Replace with your data ===== */}
               <ExperienceCard
-                company="Company Name"
-                role="Your Role Title"
-                period="MMM YYYY - MMM YYYY"
-                description="Describe your responsibilities, key achievements, and impact at this position. What did you build, improve, or lead?"
-                tech={["Tech 1", "Tech 2"]}
+                company="Code Alpha"
+                role="Java Developer Intern"
+                period="May 2026 - May 2026"
+                description="Completed a virtual internship focused on application development. Designed and implemented two core software projects using object-oriented programming principles: a Hotel Management system for handling reservations and a Student Management system for tracking academic records."
+                tech={["Java", "Swing"]}
                 status="COMPLETED"
                 images={[
-                  // { src: "/experience/offer-letter-3.png", label: "Offer Letter" },
+                  {
+                    src: "src\app\img\Zayem Ur Rahman_page-0001.jpg",
+                    label: ""
+                  },
                 ]}
               />
             </motion.div>
